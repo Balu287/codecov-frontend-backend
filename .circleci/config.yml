@@ -10,6 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Update pip
+          command: '/home/circleci/.pyenv/versions/3.10.2/bin/python3.10 -m pip install --upgrade pip'
+      - run:
           name: Install requirements
           command: pip install -r api/requirements.txt
       - run:
